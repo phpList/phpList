@@ -34,3 +34,14 @@ services:
         resource: '../src/EmptyStartPageBundle/Controller'
         public: true
         tags: [controller.service_arguments]
+
+    foo:
+        class: PhpList\PhpList4\Service\Foo
+        public: true
+        autowire: true
+#        calls:
+#            - [injectBar, ['@bar']]
+
+    bar:
+        class: PhpList\PhpList4\Service\Bar
+#        public: true
